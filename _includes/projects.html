@@ -8,10 +8,16 @@
 	  </video>
 	  <div class="container h-100">
 	    <div class="d-flex h-100 text-center align-items-center">
-	      <div class="project-info text-white" data-tilt data-tilt-maxTilt="1" data-tilt-perspective="2000">
+	      <div class="project-info text-white"
+	      	data-tilt
+	      	data-tilt-maxTilt="1"
+	      	data-tilt-perspective="2000">
+	      	{% if project.year %}
+				<p class="project-outside project-year noselect">{{ project.year }}</p>
+			{% endif %}
 			<h1 class="project-title noselect">{{ project.title }}</h1>
 			{% if project.client %}
-				<p class="project-client noselect">{{ project.client }}</p>
+				<p class=" project-outside project-client noselect">{{ project.client }}</p>
 			{% endif %}
 			<img class="project-image" src="{{ project.image_url }}">
 	      </div>
