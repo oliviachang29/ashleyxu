@@ -91,13 +91,13 @@
 }
 
 .project-outside {
+  opacity: 0;
   @include smooth-transition;
   font-size: 20px;
   font-family: Graphik;
   z-index: 100;
-  opacity: 0;
   transform: translateZ(20px);
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 .project-year {
