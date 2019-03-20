@@ -73,7 +73,7 @@
 	}
 
   &:hover {
-    .project-client {
+    .project-outside {
       opacity: 1;
     }
   }
@@ -82,39 +82,27 @@
 .project-title {
 	position: relative;
 	font-family: Ogg;
-	font-size: 12vw;
+	font-size: 10vw;
 	color: #FFFFFF;
 	text-align: center;
 	z-index: 100;
-	line-height: 10vw;
+	line-height: 8vw;
   transform: translateZ(60px)
 }
 
 .project-outside {
   @include smooth-transition;
-  position: absolute;
   font-size: 20px;
-  @media (min-width: $md) {
-    font-size: 30px;
-  }
   font-family: Graphik;
-  left: 0;
-  right: 0;
   z-index: 100;
   opacity: 0;
-  transform: translateZ(20px)
+  transform: translateZ(20px);
+  margin-top: 30px;
 }
 
 .project-year {
-  top: 0;
+
 }
 
 .project-client {
-  top: 30vh;
-  @media (min-width: $md) {
-    top: 50vh;
-  }
-  @media (min-width: $lg) {
-    top: 60vh;
-  }
 }

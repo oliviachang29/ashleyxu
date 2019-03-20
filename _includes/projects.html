@@ -1,5 +1,5 @@
 {% assign projects = site.projects | sort: "order" %}
-<div id="fullpage">
+
 {% for project in projects %}
 	<div class="section video-container">
 	  <div class="overlay"></div>
@@ -11,18 +11,20 @@
 	      <div class="project-info text-white"
 	      	data-tilt
 	      	data-tilt-maxTilt="1"
-	      	data-tilt-perspective="2000">
-	      	{% if project.year %}
-				<p class="project-outside project-year noselect">{{ project.year }}</p>
-			{% endif %}
+	      	data-tilt-perspective="2000"
+	      	data-tilt-scale="1.02">
 			<h1 class="project-title noselect">{{ project.title }}</h1>
+			<p class="project-outside">
 			{% if project.client %}
-				<p class=" project-outside project-client noselect">{{ project.client }}</p>
+				<span class="project-client noselect">{{ project.client }}</span>
 			{% endif %}
+			{% if project.year %}
+				<span class="project-year noselect">{{ project.year }}</span>
+			{% endif %}
+			</p>
 			<img class="project-image" src="{{ project.image_url }}">
 	      </div>
 	    </div>
 	  </div>
 	</div>
 {% endfor %}
-</div>

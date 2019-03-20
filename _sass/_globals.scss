@@ -8,7 +8,7 @@ html, body {
 }
 
 * {
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Graphik,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .noselect {
@@ -29,13 +29,10 @@ nav {
 	font-family: 'Graphik';
 	font-size: 30px;
 	font-weight: bold;
-	color: white !important;
 }
 
-.nav-item {
-	a {
-		color: white !important;
-	}
+.nav-color-control {
+  color: white !important;
 }
 
 #contact {
