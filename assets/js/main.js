@@ -1,7 +1,9 @@
 $('#fullpage').fullpage({
 // 		//options here
 // 		// autoScrolling:true,
-	scrollHorizontally: true
+	scrollHorizontally: true,
+	navigation: true,
+	navigationPosition: 'right',
 });
 
 // $(document).on('scroll', function() {
