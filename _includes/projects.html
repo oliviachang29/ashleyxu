@@ -1,30 +1,19 @@
 {% assign projects = site.projects | sort: "order" %}
 
 {% for project in projects %}
-	<div class="section video-container">
-	  <div class="overlay"></div>
-	  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-	    <source src="{{ project.clip_url }}" type="video/mp4">
-	  </video>
-	  <div class="container h-100">
-	    <div class="d-flex h-100 text-center align-items-center">
-	      <div class="project-info text-white"
-	      	data-tilt
-	      	data-tilt-maxTilt="1"
-	      	data-tilt-perspective="2000"
-	      	data-tilt-scale="1.02">
+	<div class="section project-container">
+	  <div class="w-100 h-100 d-flex align-items-center no-text-underline">
+	      <a class="project-info text-white" href="{{project.url}}">
+	      	<p class="project-number">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}</p>
 			<h1 class="project-title noselect">{{ project.title }}</h1>
-			<p class="project-outside">
-			{% if project.client %}
-				<span class="project-client noselect">{{ project.client }}</span>
-			{% endif %}
-			{% if project.year %}
-				<span class="project-year noselect">{{ project.year }}</span>
-			{% endif %}
+			<p class="project-client noselect">
+				{% if project.client %}
+					{{ project.client }}
+				{% endif %}
 			</p>
+			<p class="project-outside">Watch Video</p>
 			<img class="project-image" src="{{ project.image_url }}">
-	      </div>
-	    </div>
+	      </a>
 	  </div>
 	</div>
 {% endfor %}

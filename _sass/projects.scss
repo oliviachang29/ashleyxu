@@ -1,76 +1,18 @@
 @import "variables";
 
-.video-container {
-  position: relative;
-  background-color: black;
+.project-container {
+  background-color: $near-black;
   height: 100vh;
   width: 100%;
   overflow: hidden;
-}
-
-.video-container video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
-.video-container .container {
   position: relative;
-  z-index: 2;
-}
-
-.video-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #1a1a1a;
-  opacity: 0.9;
-  z-index: 1;
-}
-
-@media (pointer: coarse) and (hover: none) {
-  .video-container {
-    /*background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;*/
-  }
-  .video-container video {
-    /*display: none;*/
-  }
 }
 
 .project-info {
+  margin: 0 auto;
+  width: 90vw;
 	cursor: pointer;
-	margin: 0 auto;
   transform-style: preserve-3d;
-
-	img {
-		position: absolute;
-		height: 60vh;
-    width: 50vw;
-    filter: brightness(0.5);
-    @media (min-width: $md) {
-      width: 30vw;
-      opacity: 1;
-    }
-		object-fit: cover;
-		top: 50%;
-	  left: 50%;
-	  -ms-transform: translateX(-50%) translateY(-50%);
-	  -moz-transform: translateX(-50%) translateY(-50%);
-	  -webkit-transform: translateX(-50%) translateY(-50%);
-	  transform: translateX(-50%) translateY(-50%);
-	  z-index: 5;
-	}
 
   &:hover {
     .project-outside {
@@ -79,25 +21,43 @@
   }
 }
 
+.project-image {
+  height: auto;
+  max-width: 50vw;
+  filter: brightness(0.5);
+  object-fit: cover;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  @media (min-width: $md) {
+    opacity: 1;
+  }
+}
+
 .project-title {
 	position: relative;
 	font-family: Ogg;
 	font-size: 10vw;
 	color: #FFFFFF;
-	text-align: center;
+	text-align: left;
 	z-index: 100;
 	line-height: 8vw;
-  transform: translateZ(60px)
+  /*transform: translateZ(60px)*/
+}
+
+.project-client {
+  font-size: 20px;
+  font-family: Graphik;
+  z-index: 100;
+  margin-top: 60px;
 }
 
 .project-outside {
   opacity: 0;
   @include smooth-transition;
-  font-size: 20px;
-  font-family: Graphik;
-  z-index: 100;
   transform: translateZ(20px);
-  margin-top: 60px;
 }
 
 .project-year {
@@ -105,4 +65,17 @@
 }
 
 .project-client {
+}
+
+.project-number {
+  opacity: 0.2;
+  font-family: Graphik-Semibold;
+  font-size: 35vw;
+  letter-spacing: -14.06px;
+  position: absolute;
+  z-index: -1000;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  color: rgba(0, 0, 0, 1);
+  top: 50%;
+  transform: translateY(-50%);
 }

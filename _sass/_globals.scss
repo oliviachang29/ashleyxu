@@ -9,6 +9,7 @@ html, body {
 
 * {
   font-family: Graphik,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: white;
 }
 
 .noselect {
@@ -52,4 +53,12 @@ nav {
 
 #fp-nav ul li a span {
   background-color: white !important
+}
+
+.no-text-underline {
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

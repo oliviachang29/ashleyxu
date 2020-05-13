@@ -1,9 +1,13 @@
-$('#fullpage').fullpage({
-// 		//options here
-// 		// autoScrolling:true,
-	scrollHorizontally: true,
-	navigation: true,
-	navigationPosition: 'right',
+// $('#fullpage').fullpage({
+// // 		//options here
+// // 		// autoScrolling:true,
+// 	scrollHorizontally: true,
+// 	navigation: true,
+// 	navigationPosition: 'right',
+// });
+
+$('#fullpage').pagepiling({
+	direction: 'horizontal'
 });
 
 // $(document).on('scroll', function() {
