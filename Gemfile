@@ -6,6 +6,8 @@ gem "ffi", ">= 1.9.24"
 
 gem "minima", "~> 2.0"
 
+gem "thin"
+
 group :development do
   gem 'guard'
   gem 'guard-livereload', '~> 2.5', require: false

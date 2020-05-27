@@ -18,4 +18,10 @@ collections:
     title: Project
     output: true
     permalink: "/:title"
-    layout: project
+defaults:
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

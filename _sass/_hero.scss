@@ -1,0 +1,11 @@
+@import "variables";
+
+#hero {
+	background-color: #36373B;
+	height: calc(100vh - 200px);
+	text-align: center;
+}
+
+#hero .tagline {
+	margin-top: 15px;
+}

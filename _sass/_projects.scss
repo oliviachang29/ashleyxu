@@ -1,0 +1,54 @@
+@import "variables";
+
+.right-col {
+  @media (min-width: $md) {
+    margin-top: 150px;
+  }
+}
+
+.project-col {
+  padding: 0 40px;
+  margin-bottom: -70px;
+}
+
+.project-container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+/*.project-darken-overlay {
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}*/
+
+.project-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.4);
+}
+
+.project-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+.project-title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+  font-size: 22px;
+  letter-spacing: 3.5px;
+}
+
+.project-info {
+  font-weight: normal;
+  opacity: 0.5;
+}
