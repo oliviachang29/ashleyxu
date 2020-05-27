@@ -6,9 +6,13 @@
 // 	navigationPosition: 'right',
 // });
 
-$('#fullpage').pagepiling({
-	direction: 'horizontal'
-});
+// $('#fullpage').pagepiling({
+// 	direction: 'horizontal',
+// 	afterRender: function(){
+// 		//playing the video
+// 		$('video').get(0).play();
+// 	}
+// });
 
 // $(document).on('scroll', function() {
 //     if($(this).scrollTop()>=$('#contact').position().top){
@@ -21,3 +25,8 @@ $('#fullpage').pagepiling({
 //         })
 //     }
 // })
+
+var myFullpage = new fullpage('#fullpage', {
+        // verticalCentered: true,
+        sectionsColor: ['black']
+    });

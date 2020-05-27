@@ -1,5 +1,56 @@
 @import "variables";
 
+  /* Centered texts in each section
+  * --------------------------------------- */
+  .section {
+    text-align:center;
+    overflow: hidden;
+    background-color: $near-black;
+  }
+
+  .section video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+      /*background-image: ;*/
+      background-position: center center;
+      background-size: contain;
+      object-fit: cover; /*cover video background */
+      z-index:3;
+  }
+
+
+  /* Layer with position absolute in order to have it over the video
+  * --------------------------------------- */
+  .section .layer{
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  /* Hiding video controls
+  * See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+  * --------------------------------------- */
+  video::-webkit-media-controls {
+    display:none !important;
+  }
+
 .project-container {
   background-color: $near-black;
   height: 100vh;
@@ -19,6 +70,16 @@
       opacity: 1;
     }
   }
+}
+
+.project-video {
+  height: auto;
+  max-width: 50vw;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  filter: brightness(0.5);
 }
 
 .project-image {
@@ -58,6 +119,7 @@
   opacity: 0;
   @include smooth-transition;
   transform: translateZ(20px);
+  text-align: left;
 }
 
 .project-year {
@@ -65,6 +127,16 @@
 }
 
 .project-client {
+  text-align: left;
+}
+
+.project-number-svg {
+  font-family: Graphik-Semibold;
+  /*font-size: 35vw;
+  letter-spacing: -14.06px;*/
+  position: absolute;
+  z-index: -1000;
+  left: 0;
 }
 
 .project-number {

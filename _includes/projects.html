@@ -1,19 +1,29 @@
 {% assign projects = site.projects | sort: "order" %}
-
 {% for project in projects %}
-	<div class="section project-container">
-	  <div class="w-100 h-100 d-flex align-items-center no-text-underline">
-	      <a class="project-info text-white" href="{{project.url}}">
-	      	<p class="project-number">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}</p>
-			<h1 class="project-title noselect">{{ project.title }}</h1>
-			<p class="project-client noselect">
-				{% if project.client %}
-					{{ project.client }}
-				{% endif %}
-			</p>
-			<p class="project-outside">Watch Video</p>
-			<img class="project-image" src="{{ project.image_url }}">
-	      </a>
-	  </div>
+	<div class="section " id="section{{ forloop.index }}">
+		<video data-autoplay muted loop preload="auto">
+			<source src="{{project.clip_url.mp4}}" type="video/mp4">
+			<source src="{{project.clip_url.webm}}" type="video/webm">
+		</video>
+		<div class="layer w-100 h-100 d-flex align-items-center no-text-underline">
+				<a class="project-info text-white" href="{{project.url}}">
+
+					<svg class="project-number-svg" width="500px" height="337px" viewBox="0 0 500 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0" font-family="Helvetica Neue" font-size="450" font-weight="bold" letter-spacing="-14.0625" opacity="0.4">
+					        <g id="Desktop-HD" transform="translate(-82.000000, -283.000000)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1">
+					            <text id="01">
+					                <tspan x="64" y="612">{% if forloop.index < 10 %}0{% endif %}{{forloop.index}}</tspan>
+					            </text>
+					        </g>
+					    </g>
+					</svg>
+
+					<h1 class="project-title noselect">{{ project.title }}</h1>
+					{% if project.client %}
+						<p class="project-client noselect">{{ project.client }}</p>
+					{% endif %}
+					<p class="project-outside">Watch Video</p>
+				</a>
+		</div>
 	</div>
 {% endfor %}
