@@ -11,6 +11,10 @@ html, body {
 * {
   font-family: Graphik,Helvetica Neue,Helvetica,Arial,sans-serif;
   color: white;
+  z-index: 3;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 .noselect {
@@ -29,47 +33,13 @@ img {
 }
 
 section {
-  margin: 100px auto;
+  padding: 100px 5vw;
   min-height: 100vh;
-  width: calc(100vw - 200px);
 }
 
 .section-title {
-  margin-bottom: 100px;
+  margin-bottom: 150px;
   text-align: center;
-}
-
-nav {
-	background-color: transparent;
-}
-
-.navbar-brand {
-	font-family: 'Graphik';
-	font-size: 30px;
-	font-weight: bold;
-}
-
-.nav-color-control {
-  color: white !important;
-}
-
-#contact {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-links {
-  display: flex;
-  a {
-    margin: 20px;
-  }
-}
-
-#fp-nav ul li a span {
-  background-color: white !important
 }
 
 .no-text-underline {

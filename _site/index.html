@@ -18,112 +18,141 @@
   <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
 </head>
 	<body>
-		<section>
-	<div id="hero" class="d-flex flex-column justify-content-center">
-		<h1 class="name">Ashley Xu</h1>
-		<h4 class="tagline">Filmmaker // Creative</h4>
-	</div>
+		<nav class="navbar navbar-expand-lg" data-aos="fade-in">
+	<a class="navbar-brand nav-color-control" href="/">ash.</a>
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item noselect"><a data-scroll class="nav-link nav-color-control" href="/#contact">About</a></li>
+		<li class="nav-item noselect"><a data-scroll class="nav-link nav-color-control" href="/#contact">Contact</a></li>
+	</ul>
+</nav>
+<div class="position-fixed" id="background-container">
+	<span id="strikethrough"></span>
+	<p id="background-name">Ashley Xu</p>
 </div>
-<section>
+<section id="hero">
+	<div class="d-flex flex-column justify-content-center">
+		<div id="showreel" class="lazy" data-src="/uploads/poster/showreel.jpg">
+			<video autoplay muted loop preload="auto">
+				<source src="/uploads/videos/showreel.mp4" type="video/mp4">
+				<source src="/uploads/videos/showreel.webm" type="video/webm">
+			</video>
+		</div>
+		<p class="tagline">Filmmaker & Creative based in Palo Alto.</p>
+		<a href="#work" id="hero-cta-button">
+			<h4 id="hero-cta-text">See My Work</h4>
+			<div class="circle"></div>
+		</a>
+	</div>
+</section>
+
+<section id="work">
 	<div class="container">
 		<h4 class="section-title">My Work</h4>
 		
 		<div class="row">
 			
 				<div class="col-md-6 project-col
-							left-col">
-					<div class="project-container no-underline">
+					left-col">
+					<div class="singlevidjs project-container lazy" data-src="/uploads/poster/personalized_attention.jpg">
 						<a href="/personalized_attention">
-							<div class="project-darken-overlay"></div>
-							<img src="/uploads/images/ILS personalized attention pic.jpeg">
+							<video muted loop preload="auto">
+								<source src="uploads/videos/personalized_attention.mp4" type="video/mp4">
+								<source src="uploads/videos/personalized_attention.webm" type="video/webm">
+							</video>
+							<!-- <img src="/uploads/poster/personalized_attention.jpg"> -->
 							<div class="project-text">
 								<h4 class="project-title">Personalized Attention</h4>
 								<p class="project-info">ILS</p>
 							</div>
 						</a>
 					</div>
-				</div>	
+				</div>
 			
 				<div class="col-md-6 project-col
-							right-col">
-					<div class="project-container no-underline">
+					right-col">
+					<div class="singlevidjs project-container lazy" data-src="/uploads/poster/project_based_learning.jpg">
 						<a href="/project_based_learning">
-							<div class="project-darken-overlay"></div>
-							<img src="/uploads/images/ILS project based learning pic.jpeg">
+							<video muted loop preload="auto">
+								<source src="uploads/videos/project_based_learning.mp4" type="video/mp4">
+								<source src="uploads/videos/project_based_learning.webm" type="video/webm">
+							</video>
+							<!-- <img src="/uploads/poster/project_based_learning.jpg"> -->
 							<div class="project-text">
 								<h4 class="project-title">Project-Based Learning</h4>
 								<p class="project-info">ILS</p>
 							</div>
 						</a>
 					</div>
-				</div>	
+				</div>
 			
 				<div class="col-md-6 project-col
-							left-col">
-					<div class="project-container no-underline">
+					left-col">
+					<div class="singlevidjs project-container lazy" data-src="/uploads/poster/community.jpg">
 						<a href="/community">
-							<div class="project-darken-overlay"></div>
-							<img src="/uploads/images/ILS communit pic.jpeg">
+							<video muted loop preload="auto">
+								<source src="uploads/videos/community.mp4" type="video/mp4">
+								<source src="uploads/videos/community.webm" type="video/webm">
+							</video>
+							<!-- <img src="/uploads/poster/community.jpg"> -->
 							<div class="project-text">
 								<h4 class="project-title">Community</h4>
 								<p class="project-info">ILS</p>
 							</div>
 						</a>
 					</div>
-				</div>	
+				</div>
 			
 				<div class="col-md-6 project-col
-							right-col">
-					<div class="project-container no-underline">
+					right-col">
+					<div class="singlevidjs project-container lazy" data-src="/uploads/poster/annie_chen.jpg">
 						<a href="/annie_chen">
-							<div class="project-darken-overlay"></div>
-							<img src="/uploads/images/annie.png">
+							<video muted loop preload="auto">
+								<source src="uploads/videos/annie.mp4" type="video/mp4">
+								<source src="uploads/videos/annie.webm" type="video/webm">
+							</video>
+							<!-- <img src="/uploads/poster/annie_chen.jpg"> -->
 							<div class="project-text">
 								<h4 class="project-title">LaunchX</h4>
 								<p class="project-info">Annie Chen</p>
 							</div>
 						</a>
 					</div>
-				</div>	
+				</div>
 			
 				<div class="col-md-6 project-col
-							left-col">
-					<div class="project-container no-underline">
+					left-col">
+					<div class="singlevidjs project-container lazy" data-src="/uploads/poster/st_francis_center.jpg">
 						<a href="/st_francis">
-							<div class="project-darken-overlay"></div>
-							<img src="/uploads/images/st francis 2.jpeg">
+							<video muted loop preload="auto">
+								<source src="uploads/videos/st.mp4" type="video/mp4">
+								<source src="uploads/videos/st.webm" type="video/webm">
+							</video>
+							<!-- <img src="/uploads/poster/st_francis_center.jpg"> -->
 							<div class="project-text">
 								<h4 class="project-title">St. Francis Center</h4>
 								<p class="project-info"></p>
 							</div>
 						</a>
 					</div>
-				</div>	
+				</div>
 			
 		</div>
 	</div>
 </section>
-<section>
-	<h4 class="section-title">About</h4>
-	<div class="row">
-		<div class="col-md-6">
-		</div>
-		<div class="col-md-6">
-			<h1>About</h1>
-			<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+<section id="about">
+	<div class="container">
+		<h4 class="section-title">About</h4>
+		<div class="row">
+			<div class="col-md-6 left-col">
+				<img src="/uploads/about.jpg" id="about-image" class="lazy">
+			</div>
+			<div class="col-md-6 right-col d-flex flex-column justify-content-center">
+				<h1 class="title">About</h1>
+				<p class="description">I'm a filmmaker based in Palo Alto, CA. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			</div>
 		</div>
 	</div>
 </section>
-<div class="section">
-	<section id="contact">
-			<h1>Contact</h1>
-			<div class="contact-links">
-				<a href="mailto:">Email</a>
-				<a href="mailto:">YouTube</a>
-				<a href="mailto:">Linkedin</a>
-			</div>
-	</section>
-</div>
 	</body>
 	<script src="/assets/js/jquery.min.js" type="text/javascript"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script> -->

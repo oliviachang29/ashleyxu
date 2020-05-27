@@ -6,6 +6,13 @@
 }
 
 @font-face {
+	font-family: 'Saol Display';
+	src: url('/assets/fonts/SaolDisplay-Light.ttf')  format('truetype');
+	font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
 	font-family: 'Graphik';
 	src: url('/assets/fonts/Graphik-Regular.ttf')  format('truetype');
 	font-weight: normal;
