@@ -1,10 +1,14 @@
-// $('#fullpage').fullpage({
-// // 		//options here
-// // 		// autoScrolling:true,
-// 	scrollHorizontally: true,
-// 	navigation: true,
-// 	navigationPosition: 'right',
-// });
+$('#fullpage').fullpage({
+// 		//options here
+// 		// autoScrolling:true,
+	scrollHorizontally: true,
+	navigation: true,
+	navigationPosition: 'right',
+	scrollOverflow: false,
+    afterRender: function(){
+        $('video').get(0).play();    
+    }
+});
 
 // $('#fullpage').pagepiling({
 // 	direction: 'horizontal',
@@ -25,8 +29,3 @@
 //         })
 //     }
 // })
-
-var myFullpage = new fullpage('#fullpage', {
-        // verticalCentered: true,
-        sectionsColor: ['black']
-    });
