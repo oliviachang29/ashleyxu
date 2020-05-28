@@ -1,0 +1,48 @@
+---
+label: Data - General
+hide_body: true
+fields:
+- type: text
+  name: tagline
+  label: tagline
+- type: file
+  name: showreel_poster
+  label: showreel_poster
+- type: field_group
+  name: showreel_clip_url
+  label: showreel_clip_url
+  fields:
+  - type: text
+    name: mp4
+    label: mp4
+  - type: text
+    name: webm
+    label: webm
+- type: text
+  name: about_title
+  label: about_title
+- type: textarea
+  name: about_text
+  label: about_text
+- type: file
+  name: about_image
+  label: about_image
+- type: text
+  name: see_my_work_button
+  label: see_my_work_button
+- type: text
+  name: creative_work_title
+  label: creative_work_title
+- type: text
+  name: professional_work_title
+  label: professional_work_title
+- type: field_group_list
+  name: contact_links
+  label: contact_links
+  fields:
+  - type: text
+    name: type
+    label: type
+  - type: text
+    name: url
+    label: url
