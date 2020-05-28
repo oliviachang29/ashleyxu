@@ -1,0 +1,38 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: type
+  label: type
+- type: text
+  name: description
+  label: description
+- type: file
+  name: image_url
+  label: image_url
+- type: text
+  name: youtube_url
+  label: youtube_url
+- type: field_group
+  name: clip_url
+  label: clip_url
+  fields:
+  - type: text
+    name: mp4
+    label: mp4
+  - type: text
+    name: webm
+    label: webm
+- type: number
+  name: order
+  label: order
+- type: text
+  name: date
+  label: date
+- type: text
+  name: primary_color
+  label: primary_color
