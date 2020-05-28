@@ -1,9 +1,9 @@
 <section id="hero" class="noselect" data-background-text="AshleyXu">
 	<div class="d-flex flex-column justify-content-center">
-		<div id="showreel" class="lazy position-absolute abs-vertical-center" data-src="/uploads/poster/showreel.jpg">
+		<div id="showreel" class="lazy position-absolute abs-vertical-center" data-src="{{site.data.general.showreel_poster}}">
 			<video autoplay playsinline muted loop preload="auto">
-				<source src="/uploads/videos/showreel.mp4" type="video/mp4">
-				<source src="/uploads/videos/showreel.webm" type="video/webm">
+				<source src="{{ site.data.general.showreel_clip_url.mp4}}" type="video/mp4">
+				<source src="{{ site.data.general.showreel_clip_url.webm}}" type="video/webm">
 			</video>
 		</div>
 		<p class="tagline position-absolute abs-vertical-center">{{site.data.general.tagline}}</p>
