@@ -36,23 +36,6 @@ html.is-animating .transition-fade{
                                   supported by Chrome and Opera */
 }
 
-img {
-  opacity: 0;
-  @include smooth-transition;
-}
-
-section {
-  padding: 100px 5vw;
-  min-height: 100vh;
-  margin-bottom: 100px;
-}
-
-.section-title {
-  font-weight: bold;
-  margin-bottom: 70px;
-  text-align: center;
-}
-
 .no-text-underline {
   a {
     &:hover {
@@ -61,16 +44,18 @@ section {
   }
 }
 
-#contact-links {
-  list-style-type: none;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 100px 0 20px;
+img {
+  opacity: 0;
+  @include smooth-transition;
+}
 
-  a {
-    color: white;
-    padding: 10px;
-    margin: 10px;
-  }
+section {
+  padding: 100px $section-padding calc(100px + 20vh);
+  min-height: 100vh;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 70px;
+  text-align: center;
 }

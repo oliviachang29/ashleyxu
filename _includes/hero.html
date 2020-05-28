@@ -1,13 +1,13 @@
-<section id="hero" class="noselect">
+<section id="hero" class="noselect" data-background-text="AshleyXu">
 	<div class="d-flex flex-column justify-content-center">
-		<div id="showreel" class="lazy" data-src="/uploads/poster/showreel.jpg">
+		<div id="showreel" class="lazy position-absolute abs-vertical-center" data-src="/uploads/poster/showreel.jpg">
 			<video autoplay playsinline muted loop preload="auto">
 				<source src="/uploads/videos/showreel.mp4" type="video/mp4">
 				<source src="/uploads/videos/showreel.webm" type="video/webm">
 			</video>
 		</div>
-		<p class="tagline">{{site.data.general.tagline}}</p>
-		<a href="#creative" id="hero-cta-button">
+		<p class="tagline position-absolute abs-vertical-center">{{site.data.general.tagline}}</p>
+		<a href="#creative" class="position-absolute abs-horizontal-center" id="hero-cta-button">
 			<h4 id="hero-cta-text">{{ site.data.general.see_my_work_button }}</h4>
 			<div class="circle"></div>
 		</a>

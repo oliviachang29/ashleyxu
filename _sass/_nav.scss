@@ -1,9 +1,15 @@
+@import "variables";
+
 nav {
+  position: absolute;
 	background-color: transparent;
 }
 
 .navbar {
-  padding: 50px 10vw 70px;
+  padding: 1vh $section-padding 10px;
+  @media (min-width: $md) {
+    padding-top: 7vh;
+  }
 }
 
 .navbar-brand {

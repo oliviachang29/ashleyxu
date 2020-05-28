@@ -1,5 +1,7 @@
 #proejct-page {
-	padding-bottom: 200px;
+	@media (min-width: $md) {
+		padding-bottom: 200px;
+	}
 }
 
 #project-page-video {
@@ -9,7 +11,9 @@
 
 .project-page-meta {
 	margin-top: 100px;
-	padding: 0 100px;
+	@media (min-width: $md) {
+		padding: 0 $section-padding;
+	}
 }
 
 .project-page-client-n-date {
@@ -23,5 +27,14 @@
 }
 
 .project-page-description {
-	width: 80%;
+	@media (min-width: $md) {
+		width: 80%;
+	}
+}
+
+.project-page-client, .project-page-date {
+	margin-top: 30px;
+	@media (min-width: $md) {
+		margin-top: 0;
+	}
 }

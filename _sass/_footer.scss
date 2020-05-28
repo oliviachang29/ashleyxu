@@ -1,0 +1,20 @@
+#contact-links {
+  list-style-type: none;
+  color: white;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-direction: column;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+  }
+
+  a {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+  }
+}

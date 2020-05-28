@@ -1,35 +1,5 @@
 @import "variables";
 
-#background-container {
-  z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 0;
-  opacity: 0.13;
-  width: 90vw;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: -6vh;
-}
-
-#background-name {
-  font-size: 17vw;
-  font-family: Saol Display;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-}
-
-#strikethrough {
-  /*opacity: 0.05;*/
-  background-color: white;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  right: 0;
-}
-
 /* ===== */
 /* HERO */
 /* ==== */
@@ -42,20 +12,14 @@
 #hero .tagline {
 	font-family: Saol Display;
 	font-weight: lighter;
-	letter-spacing: 0.1vw;
+	letter-spacing: -0.1vw;
 	font-size: 6.4vw;
 	line-height: 5.7vw;
 	text-transform: uppercase;
 	width: 60vw;
 	z-index: 10;
 	opacity: 1;
-	margin-top: 30px;
-	@media (min-height: 500px) {
-		margin-top: 10vh;
-	}
-	@media (min-height: 800px) {
-		margin-top: 25vh;
-	}
+	margin-top: 5vh;
 }
 
 #showreel {
@@ -65,8 +29,6 @@
 	object-fit: cover;
 	right: 0;
 	margin-right: 9vw;
-	top: 0;
-	margin-top: 15vh;
 	filter: brightness(0.5);
 	z-index: 1;
 }
@@ -79,11 +41,8 @@
 
 #hero-cta-button {
 	/* position at bottom of page*/
-	position: absolute;
 	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	margin-bottom: 10vh;
+	margin-bottom: 5vh;
 	/* to center the text within the circle */
 	display: flex;
 	justify-content: center;
@@ -91,30 +50,38 @@
 
 	&:hover {
 		.circle {
-			opacity: 1;
+			transform: scale(1.1);
+			opacity: 0.6
 		}
-		#hero-cta-text {
-			text-decoration: none;
-		}
+		text-decoration: none;
 	}
 }
 
 #hero-cta-text {
 	margin-top: 10px;
 	white-space: nowrap;
+	font-size: 4vw;
+	@media (min-width: $sm) {
+		font-size: 20px;
+	}
 }
 
 $original-opacity: 0.3;
 
 .circle {
-	height: 100px;
-	width: 100px;
 	border: 1px solid white;
 	opacity: $original-opacity;
-	border-radius: 1000px;
+	border-radius: 100%;
 	position: absolute;
 	transform: scale(1);
+	@include smooth-transition;
 	animation: button-pulse 3s infinite;
+	height: 25vw;
+	width: 25vw;
+	@media (min-width: $sm) {
+		height: 100px;
+		width: 100px;
+	}
 }
 
 @keyframes button-pulse {
@@ -123,7 +90,7 @@ $original-opacity: 0.3;
 		opacity: $original-opacity;
 	}
 	50% {
-		transform: scale(1.5);
+		transform: scale(1.2);
 		opacity: 0;
 	}
 	100% {

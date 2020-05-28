@@ -1,4 +1,4 @@
-<section id="{{include.id}}">
+<section id="{{include.id}}" data-background-text="{{include.data_background_text}}">
 	<div class="container">
 		<h4 class="section-title">{{ include.title }}</h4>
 		{% assign projects = site.projects | where: "type", include.type | sort: "order" %}
@@ -12,7 +12,6 @@
 								<source src="{{project.clip_url.mp4}}" data-src="{{project.clip_url.mp4}}" type="video/mp4">
 								<source src="{{project.clip_url.webm}}" data-src="{{project.clip_url.webm}}" type="video/webm">
 							</video>
-							<!-- <img src="{{project.image_url}}"> -->
 							<div class="project-text">
 								<h4 class="project-title">{{project.title}}</h4>
 								<p class="project-info">{{project.client}}</p>

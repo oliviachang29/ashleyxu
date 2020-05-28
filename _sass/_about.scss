@@ -28,15 +28,23 @@ $pull-in-margin: -90px;
 
 #about .title {
 	font-size: 4rem;
+	text-align: center;
 	@media (min-width: $md) {
 		font-size: 6vw;
+		text-align: left;
+		margin-bottom: 0;
 	}
-	margin-bottom: 0;
 }
 
 #about .description {
-	font-size: 1.2rem;
+	font-size: 1rem;
+	line-height: 2rem;
+	text-align: center;
+	@media (min-width: $md) {
+		font-size: 1.2rem;
+		line-height: 2.5rem;
+		text-align: left;
+	}
 	color: #FFFFFF;
-	line-height: 2.5rem;
 	opacity: 0.9;
 }

@@ -1,4 +1,4 @@
-<div id="contact-links" class="d-flex flex-row justify-content-center">
+<div id="contact-links" class="d-flex align-items-center justify-content-center">
 	{% for item in site.data.general.contact_links %}
 		<a href="{% if item.type == 'Email' %}mailto:{% endif %}{{item.url}}" target="_blank">
 			{{ item.type }}
