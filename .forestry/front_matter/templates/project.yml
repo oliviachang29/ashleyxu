@@ -5,27 +5,41 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: type
+- name: type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - Creative
+    - Professional
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: type
-- type: text
-  name: description
-  label: description
 - type: file
   name: image_url
   label: image_url
 - type: text
   name: youtube_url
   label: youtube_url
+  description: 'Link to the Youtube video. Copy and paste from the URL bar.<br>Accepted
+    format: <em>https://www.youtube.com/watch?v=[VIDEO_ID]</em>'
 - type: field_group
   name: clip_url
   label: clip_url
   fields:
-  - type: text
-    name: mp4
+  - name: mp4
+    type: file
+    config:
+      maxSize: 64
     label: mp4
-  - type: text
-    name: webm
+  - name: webm
+    type: file
+    config:
+      maxSize: 64
     label: webm
 - type: number
   name: order
@@ -33,6 +47,19 @@ fields:
 - type: text
   name: date
   label: date
-- type: text
-  name: primary_color
+  description: 'Format: <em>Month Year</em>'
+- name: primary_color
+  type: color
   label: primary_color
+  config:
+    required: false
+    color_format: Hex
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: description
