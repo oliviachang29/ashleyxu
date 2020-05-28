@@ -2,7 +2,10 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 	{% include head.html %}
 	<body>
-		{{content}}
+		{% include nav.html %}
+		<main id="swup" class="transition-fade">
+			{{content}}
+		</main>
 		{% include footer.html %}
 	</body>
 	{% include scripts.html %}
