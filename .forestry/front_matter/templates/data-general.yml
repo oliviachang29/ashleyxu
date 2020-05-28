@@ -12,11 +12,15 @@ fields:
   name: showreel_clip_url
   label: showreel_clip_url
   fields:
-  - type: text
-    name: mp4
+  - name: mp4
+    type: file
+    config:
+      maxSize: 64
     label: mp4
-  - type: text
-    name: webm
+  - name: webm
+    type: file
+    config:
+      maxSize: 64
     label: webm
 - type: text
   name: about_title
@@ -41,8 +45,26 @@ fields:
   label: contact_links
   fields:
   - type: text
-    name: type
-    label: type
-  - type: text
     name: url
     label: url
+  - name: type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Email
+      - Linkedin
+      - Youtube
+      - Twitter
+      - Facebook
+      - Instagram
+      - Snapchat
+      - Discord
+      - Github
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: type
