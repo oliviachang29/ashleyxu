@@ -1,0 +1,42 @@
+@import "variables";
+
+/* ====== */
+/* ABOUT */
+/* ====== */
+
+#about-image {
+	width: 100%;
+	filter: brightness(0.5);
+	@media (max-width: $md) {
+		margin-bottom: 30px;
+	}
+}
+
+$pull-in-margin: -90px;
+
+#about .left-col {
+	@media (min-width: $md) {
+		margin-right: $pull-in-margin;
+	}
+}
+
+#about .right-col {
+	@media (min-width: $md) {
+		margin-left: $pull-in-margin;
+	}
+}
+
+#about .title {
+	font-size: 4rem;
+	@media (min-width: $md) {
+		font-size: 6vw;
+	}
+	margin-bottom: 0;
+}
+
+#about .description {
+	font-size: 1.2rem;
+	color: #FFFFFF;
+	line-height: 2.5rem;
+	opacity: 0.9;
+}

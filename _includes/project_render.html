@@ -1,0 +1,26 @@
+<section id="{{include.id}}">
+	<div class="container">
+		<h4 class="section-title">{{ include.title }}</h4>
+		{% assign projects = site.projects | where: "type", include.type | sort: "order" %}
+		<div class="row">
+			{% for project in projects %}
+				<div class="col-md-6 project-col
+					{% cycle 'left-col', 'right-col' %}">
+					<div class="singlevidjs project-container lazy" data-src="{{project.image_url}}">
+						<a href="{{project.url}}">
+							<video muted loop preload="auto" class="no-load-mobile">
+								<source src="{{project.clip_url.mp4}}" data-src="{{project.clip_url.mp4}}" type="video/mp4">
+								<source src="{{project.clip_url.webm}}" data-src="{{project.clip_url.webm}}" type="video/webm">
+							</video>
+							<!-- <img src="{{project.image_url}}"> -->
+							<div class="project-text">
+								<h4 class="project-title">{{project.title}}</h4>
+								<p class="project-info">{{project.client}}</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

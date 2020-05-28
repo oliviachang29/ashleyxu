@@ -1,0 +1,15 @@
+tagline: Filmmaker & Creative based in Palo Alto.
+about_title: About
+about_text: "I'm a filmmaker based in Palo Alto, CA. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."
+see_my_work_button: See My Work
+creative_work_title: Creative Work
+professional_work_title: Professional Work
+contact_links:
+- type: Email
+  url: email@example.com
+- type: Instagram
+  url: "https://www.instagram.com/ashhasacamera"
+- type: Youtube
+  url: "https://www.youtube.com/channel/UCbDYp7zoLXz5T41LKHnJUQA"
+- type: Linkedin
+  url: "https://www.linkedin.com/in/ashley-xu-54b981183/"

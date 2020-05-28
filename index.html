@@ -7,6 +7,6 @@ layout: default
 	<p id="background-name">Ashley Xu</p>
 </div>
 {% include hero.html %}
-
-{% include projects.html %}
+{% include project_render.html id="creative" title=site.data.general.creative_work_title type="Creative" %}
+{% include project_render.html id="professional" title=site.data.general.professional_work_title type="Professional" %}
 {% include about.html %}
