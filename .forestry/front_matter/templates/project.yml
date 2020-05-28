@@ -5,11 +5,14 @@ fields:
 - type: text
   name: title
   label: title
+  description: "<em>Required</em>. Video Title."
+  config:
+    required: true
 - name: type
   type: select
   default: []
   config:
-    required: false
+    required: true
     options:
     - Creative
     - Professional
@@ -19,9 +22,12 @@ fields:
       file: 
       path: 
   label: type
+  description: "<em>Required</em>. "
 - type: file
   name: image_url
-  label: image_url
+  label: Thumbnail
+  description: "<em>Required</em>. Upload a screenshot of the very first frame of
+    the video. This shows while the videos are loading."
 - type: text
   name: youtube_url
   label: youtube_url
@@ -34,26 +40,37 @@ fields:
   - name: mp4
     type: file
     config:
-      maxSize: 64
+      maxSize: 10
     label: mp4
+    description: '<em>Required</em>. Upload a MP4 version of the video. Use <a href="https://cloudconvert.com/"
+      title="https://cloudconvert.com/" target="_blank">https://cloudconvert.com/</a>
+      if you need to convert your files to MP4. Also, try to keep the file size small
+      by reducing the file size: <a href="https://www.mp4compress.com/" title="https://www.mp4compress.com/"
+      target="_blank">https://www.mp4compress.com/</a>'
   - name: webm
     type: file
     config:
       maxSize: 64
     label: webm
-- type: number
-  name: order
-  label: order
+    description: <em>Required</em>. Upload a WebM version of the video. Use <a href="https://cloudconvert.com/"
+      title="https://cloudconvert.com/" target="_blank">https://cloudconvert.com/</a>
+      to convert to WebM.
+  description: "<em>Required. </em>Both WebM and MP4 versions are required for cross-browser
+    support."
 - type: text
   name: date
   label: date
-  description: 'Format: <em>Month Year</em>'
+  description: "<em>Optional</em>. When the video was published. Format: <em>Month
+    Year</em>"
 - name: primary_color
   type: color
   label: primary_color
   config:
-    required: false
+    required: true
     color_format: Hex
+  description: "<em>Required. </em>The color that the background changes to when you
+    hover over the project."
+  default: "#1A1A1A"
 - name: description
   type: textarea
   default: ''
@@ -63,17 +80,29 @@ fields:
     schema:
       format: markdown
   label: description
+  description: "<em>Optional</em>. Description of the video."
+- type: number
+  name: order
+  label: order
+  description: "<em>Optional</em>. Change the order of the videos. Lower numbers are
+    put higher up on the page."
+  default: 1
+- name: client
+  type: text
+  config:
+    required: false
+  label: client
+  description: "<em>Optional</em>. The client for the video."
 pages:
-- _projects/reminiscence.html
 - _projects/annie_chen.html
-- _projects/ouroboros.html
 - _projects/community.html
-- _projects/personalized_attention.html
 - _projects/ehp.html
-- _projects/project_based_learning.html
 - _projects/inferior.html
-- _projects/reminiscence.html
 - _projects/newfoundland_x_labrador.html
-- _projects/sf_travel.html
 - _projects/now_open.html
+- _projects/ouroboros.html
+- _projects/personalized_attention.html
+- _projects/project_based_learning.html
+- _projects/reminiscence.html
+- _projects/sf_travel.html
 - _projects/st_francis.html
