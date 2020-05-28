@@ -1,5 +1,6 @@
 var isProjectHover = false;
 var previousBackgroundText = '';
+const PAGE_HEIGHT = $(document).height() - $(window).height()
 // const defaultBackgroundColor = '#1a1a1a'
 
 function setBackgroundText(text, italic=false) {
@@ -19,6 +20,7 @@ function setBackgroundText(text, italic=false) {
   }
 }
 
+// calculate what percent of a div is visible
 function calculateVisibilityForDiv(div$) {
     var windowHeight = $(window).height(),
         docScroll = $(document).scrollTop(),
@@ -31,11 +33,11 @@ function calculateVisibilityForDiv(div$) {
         return 0;
     } else {
         var result = 100;
-
+        // subtract the part that's been scrolled past
         if (hiddenBefore > 0) {
             result -= (hiddenBefore * 100) / divHeight;
         }
-
+        // subtract the part that hasn't been scrolled to yet
         if (hiddenAfter > 0) {
             result -= (hiddenAfter * 100) / divHeight;
         }
@@ -45,9 +47,7 @@ function calculateVisibilityForDiv(div$) {
 }
 
 function initJS() {
-  const PAGE_HEIGHT = $(document).height() - $(window).height()
   $(window).scroll(function(){
-    console.log('isProjectHover:' + isProjectHover)
     if (!isProjectHover) {
       var results = []
 
@@ -60,6 +60,7 @@ function initJS() {
           })
       });
 
+      // set background text based on the most visible div
       var mostVisible = {visibility: 0};
       results.forEach(function(item, index) {
         if (item.visibility > mostVisible.visibility) {
@@ -106,11 +107,14 @@ function initJS() {
   }
 
   // don't load videos on mobile
-  // if (jQuery.browser.mobile) {
-  //   $('.no-load-mobile').each(function() {
-  //     $(this).find('')
-  //   })
-  // }
+  if (!jQuery.browser.mobile) {
+    $('.no-load-mobile').each(function() {
+      $('source', this).each(function() {
+        $(this).attr('src', $(this).attr('data-src'))
+      })
+      $(this).load()
+    })
+  }
 
   // var video = videojs("project-page-video");
   // video.load()

@@ -9,8 +9,8 @@
 					<div class="singlevidjs project-container lazy" data-src="{{project.image_url}}" data-primary-color="{{project.primary_color}}" data-background-text="{{project.title}}">
 						<a href="{{project.url}}">
 							<video muted loop preload="auto" class="no-load-mobile">
-								<source src="{{project.clip_url.mp4}}" data-src="{{project.clip_url.mp4}}" type="video/mp4">
-								<source src="{{project.clip_url.webm}}" data-src="{{project.clip_url.webm}}" type="video/webm">
+								<source data-src="{{project.clip_url.mp4}}" type="video/mp4">
+								<source data-src="{{project.clip_url.webm}}" type="video/webm">
 							</video>
 							<div class="project-text">
 								<h4 class="project-title">{{project.title}}</h4>
