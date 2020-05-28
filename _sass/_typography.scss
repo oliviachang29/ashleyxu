@@ -7,9 +7,23 @@
 
 @font-face {
 	font-family: 'Saol Display';
+	src: url('/assets/fonts/SaolDisplay-LightItalic.ttf')  format('truetype');
+	font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+	font-family: 'Saol Display';
 	src: url('/assets/fonts/SaolDisplay-Regular.ttf')  format('truetype');
 	font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+	font-family: 'Saol Display';
+	src: url('/assets/fonts/SaolDisplay-RegularItalic.ttf')  format('truetype');
+	font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {

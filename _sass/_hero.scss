@@ -42,7 +42,10 @@
 #hero-cta-button {
 	/* position at bottom of page*/
 	bottom: 0;
-	margin-bottom: 5vh;
+	margin-bottom: 10vh;
+	@media (min-height: 1000px) {
+		margin-bottom: 70px;
+	}
 	/* to center the text within the circle */
 	display: flex;
 	justify-content: center;

@@ -1,3 +1,23 @@
+var isProjectHover = false;
+var previousBackgroundText = '';
+
+function setBackgroundText(text, italic=false) {
+  // check if the text isn't already that
+  if ($('.background-text').first().text() !== text) {
+    // set the previous text so we can revert
+    previousBackgroundText = $('.background-text').first().text();
+    // replace the text
+    $('.background-text').text(text.replace(/\s/g, ''));
+
+    if (italic) {
+      // italicize background text
+      $('.background-text').css("font-style", "italic")
+    } else {
+      $('.background-text').css("font-style", "normal")
+    }
+  }
+}
+
 function calculateVisibilityForDiv(div$) {
     var windowHeight = $(window).height(),
         docScroll = $(document).scrollTop(),
@@ -26,31 +46,27 @@ function calculateVisibilityForDiv(div$) {
 function initJS() {
   const PAGE_HEIGHT = $(document).height() - $(window).height()
   $(window).scroll(function(){
-    // line becomes shorter as user scrolls
-    // var strikethrough = $("#strikethrough");
-    // var width = ((1 - ($(window).scrollTop() / PAGE_HEIGHT)) * 100).toString() + "%";
-    // strikethrough.css("width", width);
+    console.log('isProjectHover:' + isProjectHover)
+    if (!isProjectHover) {
+      var results = []
 
-    var results = []
+      $('section').each(function () {
+          var div$ = $(this);
+          results.push({
+            id: div$.attr('id'),
+            backgroundText: div$.attr('data-background-text'),
+            visibility: Math.round(calculateVisibilityForDiv(div$))
+          })
+      });
 
-    $('section').each(function () {
-        var div$ = $(this);
-        results.push({
-          id: div$.attr('id'),
-          backgroundText: div$.attr('data-background-text'),
-          visibility: Math.round(calculateVisibilityForDiv(div$))
-        })
-    });
+      var mostVisible = {visibility: 0};
+      results.forEach(function(item, index) {
+        if (item.visibility > mostVisible.visibility) {
+          mostVisible = item;
+        }
+      })
 
-    var mostVisible = {visibility: 0};
-    results.forEach(function(item, index) {
-      if (item.visibility > mostVisible.visibility) {
-        mostVisible = item;
-      }
-    })
-
-    if ($('.background-text').first().text() !== mostVisible.backgroundText) {
-      $('.background-text').text(mostVisible.backgroundText);
+      setBackgroundText(mostVisible.backgroundText)
     }
 
   });
@@ -69,10 +85,18 @@ function initJS() {
   function hoverVideo(e) {  
       $('video', this).get(0).play();
       $('video', this).css("filter", "brightness(0.7)")
+      isProjectHover = true;
+      setBackgroundText($(this).attr("data-background-text"), true)
+      // uncomment to use marquee while hover and otherwise pause it
+      // $('.marquee-inner').css('animation-play-state', 'running')
   }
   function hideVideo(e) {
       $('video', this).get(0).pause(); 
       $('video', this).css("filter", "brightness(0.5)")
+      isProjectHover = false;
+      setBackgroundText(previousBackgroundText)
+      // uncomment to use marquee while hover and otherwise pause it
+      // $('.marquee-inner').css('animation-play-state', 'paused')
   }
 
   // don't load videos on mobile
@@ -86,6 +110,7 @@ function initJS() {
   // video.load()
 
 }
+
 // executes this stuff before load
 // $(function() {
 //     const swup = new Swup();
