@@ -77,7 +77,7 @@ $original-opacity: 0.3;
 	border-radius: 100%;
 	position: absolute;
 	transform: scale(1);
-	@include smooth-transition;
+	@include smooth-transition(0.25s);
 	animation: button-pulse 3s infinite;
 	height: 25vw;
 	width: 25vw;

@@ -6,7 +6,7 @@
 			{% for project in projects %}
 				<div class="col-md-6 project-col
 					{% cycle 'left-col', 'right-col' %}">
-					<div class="singlevidjs project-container lazy" data-src="{{project.image_url}}" data-color="{{project.primary_color}}" data-background-text="{{project.title}}">
+					<div class="singlevidjs project-container lazy" data-src="{{project.image_url}}" data-primary-color="{{project.primary_color}}" data-background-text="{{project.title}}">
 						<a href="{{project.url}}">
 							<video muted loop preload="auto" class="no-load-mobile">
 								<source src="{{project.clip_url.mp4}}" data-src="{{project.clip_url.mp4}}" type="video/mp4">

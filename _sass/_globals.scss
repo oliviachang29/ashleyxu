@@ -6,7 +6,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: #1A1A1A;
-  @include smooth-transition;
+  @include smooth-transition(0.8s);
 }
 
 * {
@@ -47,7 +47,7 @@ html.is-animating .transition-fade{
 
 img {
   opacity: 0;
-  @include smooth-transition;
+  @include smooth-transition(0.25s);
 }
 
 section {

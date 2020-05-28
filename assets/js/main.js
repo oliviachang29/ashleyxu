@@ -1,5 +1,6 @@
 var isProjectHover = false;
 var previousBackgroundText = '';
+// const defaultBackgroundColor = '#1a1a1a'
 
 function setBackgroundText(text, italic=false) {
   // check if the text isn't already that
@@ -86,6 +87,7 @@ function initJS() {
       $('video', this).get(0).play();
       $('video', this).css("filter", "brightness(0.7)")
       isProjectHover = true;
+      $('html, body').css("background-color", $(this).attr("data-primary-color"))
       setBackgroundText($(this).attr("data-background-text"), true)
       // uncomment to use marquee while hover and otherwise pause it
       // $('.marquee-inner').css('animation-play-state', 'running')
@@ -95,6 +97,10 @@ function initJS() {
       $('video', this).css("filter", "brightness(0.5)")
       isProjectHover = false;
       setBackgroundText(previousBackgroundText)
+
+      // uncomment to change color back to default
+      // $('html, body').css("background-color", defaultBackgroundColor)
+      
       // uncomment to use marquee while hover and otherwise pause it
       // $('.marquee-inner').css('animation-play-state', 'paused')
   }
