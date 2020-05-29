@@ -8,20 +8,32 @@ fields:
 - type: file
   name: showreel_poster
   label: showreel_poster
+  description: "<em>Required</em>. Upload a screenshot of the very first frame of
+    the video. This shows while the videos are loading."
 - type: field_group
   name: showreel_clip_url
-  label: showreel_clip_url
+  label: Showreel Clip URL
   fields:
   - name: mp4
     type: file
     config:
       maxSize: 64
     label: mp4
+    description: '<em>Required</em>. Upload a MP4 version of the video. Use <a href="https://cloudconvert.com/"
+      title="https://cloudconvert.com/" target="_blank">https://cloudconvert.com/</a>
+      if you need to convert your files to MP4. Also, try to keep the file size small
+      by reducing the file size: <a href="https://www.mp4compress.com/" title="https://www.mp4compress.com/"
+      target="_blank">https://www.mp4compress.com/</a>'
   - name: webm
     type: file
     config:
       maxSize: 64
     label: webm
+    description: <em>Required</em>. Upload a WebM version of the video. Use <a href="https://cloudconvert.com/"
+      title="https://cloudconvert.com/" target="_blank">https://cloudconvert.com/</a>
+      to convert to WebM.
+  description: "<em>Required. </em>Both WebM and MP4 versions are required for cross-browser
+    support."
 - type: text
   name: about_title
   label: about_title
