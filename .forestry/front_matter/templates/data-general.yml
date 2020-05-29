@@ -68,3 +68,5 @@ fields:
         file: 
         path: 
     label: type
+pages:
+- _data/general.yml

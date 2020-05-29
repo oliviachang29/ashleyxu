@@ -1,10 +1,13 @@
+---
 tagline: Filmmaker & Creative based in Palo Alto.
 showreel_poster: "/uploads/poster/showreel.jpg"
 showreel_clip_url:
   mp4: "/uploads/videos/showreel.mp4"
   webm: "/uploads/videos/showreel.webm"
 about_title: About
-about_text: "I'm a filmmaker based in Palo Alto, CA. Curabitur blandit tempus porttitor. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."
+about_text: I'm a filmmaker based in Palo Alto, CA. Curabitur blandit tempus porttitor.
+  Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nullam
+  id dolor id nibh ultricies vehicula ut id elit.
 about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
 creative_work_title: Creative Work
@@ -13,8 +16,8 @@ contact_links:
 - type: Email
   url: email@example.com
 - type: Instagram
-  url: "https://www.instagram.com/ashhasacamera"
+  url: https://www.instagram.com/ashhasacamera
 - type: Youtube
-  url: "https://www.youtube.com/channel/UCbDYp7zoLXz5T41LKHnJUQA"
+  url: https://www.youtube.com/channel/UCbDYp7zoLXz5T41LKHnJUQA
 - type: Linkedin
-  url: "https://www.linkedin.com/in/ashley-xu-54b981183/"
+  url: https://www.linkedin.com/in/ashley-xu-54b981183/
