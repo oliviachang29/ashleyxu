@@ -12,6 +12,7 @@ about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
 creative_work_title: Creative Work
 professional_work_title: Professional Work
+nav_contact_link: "mailto:email@example.com"
 contact_links:
 - type: Email
   url: email@example.com

@@ -36,15 +36,6 @@ function homePage() {
 
   });
 
-  // unveil images
-  $('.lazy').unveil({
-      offset: 200,
-      placeholder: '/assets/images/lazy.jpg',
-      debug: true
-  }).on('loaded.unveil', function () {
-      this.style.opacity = 1;
-  });
-
   // play videos on hover
   var figure = $(".singlevidjs").hover( hoverVideo, hideVideo );
 
@@ -131,6 +122,15 @@ function projectPage() {
 }
 
 function pageHandler() {
+  // unveil images
+  $('.lazy').unveil({
+      offset: 200,
+      placeholder: '/assets/images/lazy.jpg',
+      debug: true
+  }).on('loaded.unveil', function () {
+      this.style.opacity = 1;
+  });
+  
   if (window.location.pathname == '/') {
     homePage()
   } else {
