@@ -2,9 +2,10 @@
 layout: default
 ---
 <section id="project-page">
+	<!-- unique identifier needed to load video.js after swup -->
 	<video
-	    class="video-js vjs-default-skin vjs-big-play-centered"
-	    id="project-page-video"
+	    class="video-js vjs-default-skin vjs-big-play-centered project-page-video"
+	    id="project-page-video-{{page.title | slugify }}"
 	    controls
 	    autoplay
 	    preload="auto"
