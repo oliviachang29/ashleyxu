@@ -32,7 +32,9 @@ fields:
   name: youtube_url
   label: youtube_url
   description: 'Link to the Youtube video. Copy and paste from the URL bar.<br>Accepted
-    format: <em>https://www.youtube.com/watch?v=[VIDEO_ID]</em>'
+    formats:<br>youtube.com as well as youtu.be<br>Regular URLs: http://www.youtube.com/watch?v=xjS6SftYQaQ<br>Embedded
+    URLs: http://www.youtube.com/embed/xjS6SftYQaQ<br>Playlist URLs: http://www.youtube.com/playlist?list=PLA60DCEB33156E51F
+    OR http://www.youtube.com/watch?v=xjS6SftYQaQ&amp;list=SPA60DCEB33156E51F'
 - type: field_group
   name: clip_url
   label: clip_url
