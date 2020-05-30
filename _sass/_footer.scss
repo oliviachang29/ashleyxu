@@ -1,7 +1,8 @@
+@import "variables";
+
 #contact-links {
   list-style-type: none;
   color: white;
-  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -11,10 +12,16 @@
   @media (min-width: $md) {
     flex-direction: row;
   }
+}
 
-  a {
-    color: white;
-    padding: 10px;
-    margin: 10px;
+#contact-links a {
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  opacity: 0.8;
+  @include smooth-transition(0.25s);
+  &:hover {
+    text-decoration: none;
+    opacity: 1;
   }
 }

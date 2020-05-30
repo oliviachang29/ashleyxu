@@ -19,11 +19,7 @@
 .project-container {
   width: 100%;
   position: relative;
-  background-position: center center;
-  background-size: cover;
-  background-blend-mode: multiply;
   background-color: rgba(0,0,0,.5); // Make background dark
-
   height: 250px;
   @media (min-width: $sm) {
     height: 300px;
