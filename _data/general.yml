@@ -5,14 +5,15 @@ showreel_clip_url:
   mp4: "/uploads/videos/showreel.mp4"
   webm: "/uploads/videos/showreel.webm"
 about_title: About
-about_text: I'm a filmmaker based in Palo Alto, CA. Curabitur blandit tempus porttitor.
-  Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Nullam
-  id dolor id nibh ultricies vehicula ut id elit.
+about_text: I'm a filmmaker based in Palo Alto, CA and an undergraduate film and television
+  student at the School of Communication at Northwestern University. As I advance
+  through my studies, I hope to promote the presence of minority filmmakers in the
+  industry and use the medium as a pathway for societal change.
 about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
 creative_work_title: Creative Work
 professional_work_title: Professional Work
-nav_contact_link: "mailto:email@example.com"
+nav_contact_link: mailto:email@example.com
 contact_links:
 - type: Email
   url: email@example.com
