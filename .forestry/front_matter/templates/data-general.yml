@@ -54,7 +54,7 @@ fields:
   label: professional_work_title
 - type: field_group_list
   name: contact_links
-  label: contact_links
+  label: Contact Links
   fields:
   - type: text
     name: url
@@ -80,5 +80,7 @@ fields:
         file: 
         path: 
     label: type
+  config:
+    labelField: type
 pages:
 - _data/general.yml
