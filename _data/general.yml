@@ -13,7 +13,7 @@ about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
 creative_work_title: Creative Work
 professional_work_title: Professional Work
-nav_contact_link: ash.xu@palettemgmt.com
+nav_contact_link: mailto:ash.xu@palettemgmt.com
 contact_links:
 - type: Email
   url: ash.xu@palettemgmt.com
