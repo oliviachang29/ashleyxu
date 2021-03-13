@@ -82,5 +82,11 @@ fields:
     label: type
   config:
     labelField: type
+- name: nav_contact_link
+  type: text
+  config:
+    required: false
+  label: Nav Contact Link
+  description: Where the "Contact" button in the top right goes
 pages:
 - _data/general.yml
