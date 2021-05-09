@@ -46,12 +46,6 @@ fields:
 - type: text
   name: see_my_work_button
   label: see_my_work_button
-- type: text
-  name: creative_work_title
-  label: creative_work_title
-- type: text
-  name: professional_work_title
-  label: professional_work_title
 - type: field_group_list
   name: contact_links
   label: Contact Links
@@ -88,5 +82,12 @@ fields:
     required: false
   label: Nav Contact Link
   description: Where the "Contact" button in the top right goes
+- name: sections
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: sections
 pages:
 - _data/general.yml
