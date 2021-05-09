@@ -1,9 +1,8 @@
-<section id="{{include.id}}" data-background-text="{{include.data_background_text}}">
+<section id="{{include.type | slugify}}" data-background-text="{{include.type}}">
 	<div class="container">
-		<h4 class="section-title">{{ include.title }}</h4>
-		{% assign projects = site.projects | where: "type", include.type | sort: "order" %}
+		<h4 class="section-title">{{ include.type }}</h4>
 		<div class="row">
-			{% for project in projects %}
+			{% for project in include.projects %}
 				<div class="col-md-6 project-col
 					{% cycle 'left-col', 'right-col' %}">
 					<div class="singlevidjs project-container video-container-background-image"  data-primary-color="{{project.primary_color}}" data-background-text="{{project.title}}">

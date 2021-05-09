@@ -3,6 +3,11 @@ layout: default
 ---
 {% include background_name.html %}
 {% include hero.html %}
-{% include project_render.html id="creative" title=site.data.general.creative_work_title type="Creative" data_background_text=site.data.general.creative_work_title %}
-{% include project_render.html id="professional" title=site.data.general.professional_work_title type="Professional" data_background_text=site.data.general.professional_work_title %}
+{% for section in site.data.general.sections %}
+    {% assign section_projects = site.projects | where: "type", section.type | sort: "order" %}
+    {% assign section_projects_size = section_projects | size %}
+    {% unless section_projects_size == 0 %}
+        {% include project_render.html type=section.type projects=section_projects %}
+    {% endunless %}
+{% endfor %}
 {% include about.html %}

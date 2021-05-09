@@ -11,9 +11,10 @@ about_text: I'm a filmmaker based in Palo Alto, CA and an undergraduate film and
   industry and use the medium as a pathway for societal change.
 about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
-creative_work_title: Creative Work
-professional_work_title: Professional Work
-nav_contact_link: mailto:ash.xu@palettemgmt.com
+sections:
+- type: 'Creative Work'
+- type: 'Professional Work'
+- type: 'Commercial Work'
 contact_links:
 - type: Email
   url: ash.xu@palettemgmt.com
