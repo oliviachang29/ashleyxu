@@ -8,21 +8,6 @@ fields:
   description: "<em>Required</em>. Video Title."
   config:
     required: true
-- name: type
-  type: select
-  default: []
-  config:
-    required: true
-    options:
-    - Creative
-    - Professional
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: type
-  description: "<em>Required</em>. "
 - type: file
   name: image_url
   label: Thumbnail
@@ -95,6 +80,14 @@ fields:
     required: false
   label: client
   description: "<em>Optional</em>. The client for the video."
+- name: type
+  type: text
+  config:
+    required: false
+  label: type
+  description: This should exactly match the name of one of the sections (set under
+    <strong>General</strong>). For example:<br>Creative Work<br>Professional Work<br>Commercial
+    Work
 pages:
 - _projects/annie_chen.html
 - _projects/community.html
