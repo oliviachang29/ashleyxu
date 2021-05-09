@@ -20,7 +20,7 @@ fields:
   name: image_url
   label: Thumbnail
   description: "<em>Required</em>. Upload a screenshot of the very first frame of
-    the video. This shows while the videos are loading."
+    the video clip. This shows while the videos are loading."
 - type: text
   name: youtube_url
   label: youtube_url
