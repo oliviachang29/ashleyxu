@@ -88,6 +88,8 @@ fields:
     use_select: false
     min: 
     max: 
-  label: sections
+  label: Sections
+  description: These should exactly match the <strong>Type</strong> field of a project
+    (case-sensitive).
 pages:
 - _data/general.yml
