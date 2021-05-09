@@ -12,10 +12,7 @@ about_text: I'm a filmmaker based in Palo Alto, CA and an undergraduate film and
 about_image: "/uploads/about.jpg"
 see_my_work_button: See My Work
 nav_contact_link: mailto:ash.xu@palettemgmt.com
-sections:
-- type: 'Creative Work'
-- type: 'Professional Work'
-- type: 'Commercial Work'
+sections: ['Creative Work', 'Professional Work', 'Commercial Work']
 contact_links:
 - type: Email
   url: ash.xu@palettemgmt.com
